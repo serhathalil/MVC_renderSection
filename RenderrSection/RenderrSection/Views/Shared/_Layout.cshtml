@@ -1,0 +1,42 @@
+﻿ 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <div class="container">
+            <div class="row">
+                @Html.ActionLink("Anasayfa","Index","Home")
+                @Html.ActionLink("Hakkımızda", "Hakkimizda", "Home")
+                @Html.ActionLink("İletişim", "Iletisim", "Home")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="background-color:brown ">
+                @RenderSection("MenuAd")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9"style="background-color:pink; ">
+                @RenderSection("Icerik")
+            </div>
+            <div class="col-md-3" style="background-color:green; height:25px;">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="background-color:grey;height:50px"></div>
+        </div>
+
+    </div>
+</body>
+</html>
